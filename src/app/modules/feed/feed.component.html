@@ -1,0 +1,18 @@
+<app-header-feed></app-header-feed>
+<div class="main-container">
+    <app-sidebar></app-sidebar>
+    <div class="content">
+        <ng-container *ngFor="let publication of publications">
+            <app-publication-card 
+                [photo_profile]="publication.image" 
+                [user_name]="publication.user_name" 
+                [description]="publication.description" 
+                [image]="publication.image">
+            </app-publication-card>
+        </ng-container>
+    </div>
+</div>
+
+<button class="floating-button" (click)="openPublicationDialog()">
+    <i class="fas fa-plus"></i>
+</button>

@@ -1,0 +1,64 @@
+.directorio-card {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-family: "Roboto Slab", serif;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.description {
+    font-size: 1em;
+    color: #666;
+}
+
+.contact-details {
+    margin-top: 10px;
+}
+
+.contact-item {
+    font-size: 0.9em;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre el icono y el texto */
+}
+
+.message-button {
+    margin-top: 10px;
+    background-color: #0d3b66; /* Color del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre el icono y el texto del botón */
+    transition: background-color 0.3s;
+}
+
+.message-button:hover {
+    background-color: #074c80; /* Color del botón al pasar el ratón */
+}

@@ -1,0 +1,20 @@
+<div class="directorio-card">
+    <div class="header">
+        <img class="profile-img" [src]="photo_profile" alt="Foto de perfil">
+        <div class="contact-info">
+            <h3 class="user-name">{{ user_name }}</h3>
+            <p class="description">{{ description }}</p>
+            <div class="contact-details">
+                <p class="contact-item">
+                    <i class="fas fa-phone"></i> {{ phone_number }}
+                </p>
+                <p class="contact-item">
+                    <i class="fas fa-envelope"></i> {{ email }}
+                </p>
+            </div>
+            <button class="message-button">
+                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+            </button>
+        </div>
+    </div>
+</div>

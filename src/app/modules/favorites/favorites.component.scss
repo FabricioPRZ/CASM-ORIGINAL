@@ -1,0 +1,43 @@
+.main-container {
+    display: flex;
+    padding-top: 20px; 
+}
+
+app-sidebar {
+    width: 250px; 
+    position: relative; 
+}
+
+.favorites-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-start; 
+    gap: 15px; 
+    padding: 20px; 
+    flex: 1; 
+    margin-top: 0; 
+    margin-left: 20px;
+}
+
+.favorite-card {
+    width: calc(33.33% - 15px); 
+    height: 150px; 
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.footer-favorites {
+    position: relative;
+    z-index: 1;
+}
