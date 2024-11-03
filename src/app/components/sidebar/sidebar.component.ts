@@ -15,4 +15,16 @@ export class SidebarComponent {
     event.preventDefault();
     this.router.navigate(["/favorites"])
   }
+  redirect_to_feed (event: Event){
+    event.preventDefault();
+    this.router.navigate(["/feed"])
+  }
+  redirect_to_chat (event: Event){
+    event.preventDefault();
+    this.router.navigate(["/chat"])
+  }
+  redirect_to_notes (event: Event){
+    event.preventDefault();
+    this.router.navigate(["/notes"])
+  }
 }

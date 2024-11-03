@@ -1,0 +1,9 @@
+<app-header-feed></app-header-feed>
+<div class="chat-container">
+  <div class="chat-sidebar">
+    <app-chat-siderbar (chatSelected)="onChatSelected($event)"></app-chat-siderbar>
+  </div>
+  <div class="chat-window">
+    <app-chat-windows [chat]="selectedChat" [currentUser]="currentUser"></app-chat-windows>
+  </div>
+</div>

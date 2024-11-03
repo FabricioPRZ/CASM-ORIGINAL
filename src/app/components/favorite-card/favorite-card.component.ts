@@ -7,11 +7,11 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [PublicationCardComponent, CommonModule],
   templateUrl: './favorite-card.component.html',
-  styleUrls: ['./favorite-card.component.scss'] // Cambiado a styleUrls
+  styleUrls: ['./favorite-card.component.scss']
 })
 export class FavoriteCardComponent {
-  @Input() type!: string; // 'publication', 'psychologist', 'note'
-  @Input() itemData!: any; // Ajusta el tipo según tu estructura de datos
+  @Input() type!: string; // 'publication', 'voluntary', 'note'
+  @Input() itemData!: any;
 
   sendMessage(id: string) {
     // Lógica para enviar un mensaje al psicólogo

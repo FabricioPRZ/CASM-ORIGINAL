@@ -5,7 +5,9 @@
         <h2 class="user-name">Juan Pérez</h2>
     </div>
     <div class="icon">
-        <i class="fas fa-paper-plane"> Mensajes</i>
-        <i class="fas fa-cog"> Configuración</i>
+        <i class="fas fa-paper-plane" (click)="redirect_to_chat($event)" title="Mensajes"></i>
+        <span (click)="redirect_to_chat($event)">Mensajes</span>
+        <i class="fas fa-cog" (click)="redirect_to_configuration($event)" title="Configuración"></i>
+        <span  (click)="redirect_to_configuration($event)">Configuración</span>
     </div>
 </div>

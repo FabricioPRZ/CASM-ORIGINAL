@@ -1,0 +1,39 @@
+/* chat.component.css */
+
+/* Reset para quitar márgenes y padding de elementos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.chat-container {
+    display: flex;
+    height: 100vh; /* Asegúrate de ocupar toda la altura de la ventana */
+}
+
+.chat-sidebar {
+    width: 300px;
+    padding: 0; /* Cambiado a 0 para eliminar el espacio */
+    border-right: 1px solid #ddd;
+    background-color: #f4f4f4;
+    height: 100%; /* Asegura que ocupe toda la altura del contenedor */
+}
+
+.chat-window {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Cambiado a 0 para eliminar el espacio */
+    height: 100%; /* Asegúrate de que ocupe toda la altura */
+}
+
+/* Asegúrate de que los elementos dentro de chat-window también se ajusten */
+.chat-window h3 {
+    margin: 0; /* Elimina margen del encabezado */
+}
+
+.input-area {
+    border-top: 1px solid #ddd;
+    padding: 10px; /* Mantén este padding si lo necesitas */
+}

@@ -7,6 +7,7 @@ import { RegisterComponent } from './modules/register/register.component';
 import { RegisterVoluntaryComponent } from './modules/register-voluntary/register-voluntary.component';
 import { DirectoryComponent } from './modules/directory/directory.component';
 import { FavoritesComponent } from './modules/favorites/favorites.component';
+import { ChatComponent } from './modules/chat/chat.component';
 export const routes: Routes = [
     {path: "", redirectTo: "home", pathMatch: 'full'},
     {path: "home", component: HomeComponent},
@@ -16,5 +17,6 @@ export const routes: Routes = [
     {path: "register",  component: RegisterComponent},
     {path: "register-voluntary", component: RegisterVoluntaryComponent},
     {path: "directory", component: DirectoryComponent},
-    {path: "favorites", component: FavoritesComponent}
+    {path: "favorites", component: FavoritesComponent},
+    {path: "chat", component:  ChatComponent}
 ];

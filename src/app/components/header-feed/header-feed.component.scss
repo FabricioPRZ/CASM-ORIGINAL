@@ -20,6 +20,7 @@
     font-size: 48px;
     color: white;
     letter-spacing: 15px;
+    font-family: "Merriweather Sans", sans-serif;
 }
 
 .header-right-ul {
@@ -39,6 +40,7 @@
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .header-right-ul-li-a:hover {

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { User } from '../models/user'; // Asegúrate de tener un modelo User adecuado
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +35,5 @@ export class AuthService {
   // Método para cerrar sesión
   logout(): void {
     this.currentUser = null; // Limpia el usuario actual
-    // Aquí podrías agregar una llamada para invalidar la sesión en el backend
   }
 }
