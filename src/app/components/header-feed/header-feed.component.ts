@@ -15,4 +15,8 @@ export class HeaderFeedComponent {
     event.preventDefault();
     this.router.navigate(["/directory"])
   }
+  redirect_to_feed (event: Event){
+    event.preventDefault();
+    this.router.navigate(["/feed"])
+  }
 }
