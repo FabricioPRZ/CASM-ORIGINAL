@@ -16,3 +16,12 @@
 <button class="floating-button" (click)="openPublicationDialog()">
     <i class="fas fa-plus"></i>
 </button>
+
+<div class="notes">
+    <app-note-card
+      *ngFor="let note of notes"
+      [title]="note.title"
+      [content]="note.content"
+      (share)="onShare($event)">
+    </app-note-card>
+</div>

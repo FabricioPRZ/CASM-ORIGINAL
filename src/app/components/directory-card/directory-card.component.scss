@@ -42,12 +42,12 @@
     color: #666;
     display: flex;
     align-items: center;
-    gap: 5px; /* Espacio entre el icono y el texto */
+    gap: 5px;
 }
 
 .message-button {
     margin-top: 10px;
-    background-color: #0d3b66; /* Color del botón */
+    background-color: #0d3b66;
     color: white;
     border: none;
     border-radius: 5px;
@@ -55,10 +55,10 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 5px; /* Espacio entre el icono y el texto del botón */
+    gap: 5px;
     transition: background-color 0.3s;
 }
 
 .message-button:hover {
-    background-color: #074c80; /* Color del botón al pasar el ratón */
+    background-color: #074c80;
 }

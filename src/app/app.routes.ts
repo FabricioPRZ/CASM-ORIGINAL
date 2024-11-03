@@ -9,6 +9,7 @@ import { DirectoryComponent } from './modules/directory/directory.component';
 import { FavoritesComponent } from './modules/favorites/favorites.component';
 import { ChatComponent } from './modules/chat/chat.component';
 import { AboutComponent } from './modules/about/about.component';
+import { NotesComponent } from './modules/notes/notes.component';
 export const routes: Routes = [
     {path: "", redirectTo: "home", pathMatch: 'full'},
     {path: "home", component: HomeComponent},
@@ -21,4 +22,5 @@ export const routes: Routes = [
     {path: "favorites", component: FavoritesComponent},
     {path: "chat", component:  ChatComponent},
     {path: "about", component:  AboutComponent},
+    {path: "notes", component: NotesComponent}
 ];
