@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { HeaderFeedComponent } from "../../components/header-feed/header-feed.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { NoteCardComponent } from '../../components/note-card/note-card.component';
@@ -7,6 +7,7 @@ import { NoteDialogComponent } from '../../components/note-dialog/note-dialog.co
 import { Note } from '../../models/note';
 import { MatDialog } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-notes',
@@ -18,19 +19,52 @@ import { CommonModule } from '@angular/common';
 export class NotesComponent {
   notes: Note[] = [];
 
-  constructor(private dialog: MatDialog) {}
+  isSidebarVisible: boolean = true;
+  isMobileView: boolean = false;
+  
+  constructor(private dialog: MatDialog, private router: Router) {}
 
   ngOnInit(): void {
     this.loadNotes();
+    this.checkScreenSize();
   }
 
   loadNotes(): void {
-    // Aquí puedes cargar las notas desde un servicio o API
     this.notes = [
       { title: 'Nota 1', content: 'Contenido de la nota 1' },
       { title: 'Nota 2', content: 'Contenido de la nota 2' },
       { title: 'Nota 3', content: 'Contenido de la nota 3' }
     ];
+  }
+
+  redirect_to_favorites(event: Event): void {
+    event.preventDefault();
+    this.router.navigate(["/favorites"]);
+  }
+
+  redirect_to_feed(event: Event): void {
+    event.preventDefault();
+    this.router.navigate(["/feed"]);
+  }
+
+  redirect_to_chat(event: Event): void {
+    event.preventDefault();
+    this.router.navigate(["/chat"]);
+  }
+
+  redirect_to_notes(event: Event): void {
+    event.preventDefault();
+    this.router.navigate(["/notes"]);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any): void {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize(): void {
+    this.isMobileView = window.innerWidth <= 768;
+    this.isSidebarVisible = !this.isMobileView;
   }
 
   openNoteDialog(): void {

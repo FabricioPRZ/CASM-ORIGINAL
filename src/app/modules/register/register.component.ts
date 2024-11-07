@@ -23,7 +23,8 @@ export class RegisterComponent {
     password: "",
     specialty: "",
     phone: "",
-    role: "user"
+    role: "user",
+    profileImage: ""
   };
   
   notificationMessage: string = '';
@@ -62,6 +63,7 @@ export class RegisterComponent {
       specialty: "",
       phone: "",
       role: "user",
+      profileImage: ""
     };
   }
 }

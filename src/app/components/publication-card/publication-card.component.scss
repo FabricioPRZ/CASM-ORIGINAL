@@ -54,3 +54,45 @@
     object-fit: cover;
     border-radius: 10px;
 }
+
+@media (max-width: 767px) {
+    .publication-card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .user-name {
+        font-size: 1em;
+    }
+
+    .description {
+        font-size: 0.9em;
+    }
+
+    .post-img {
+        max-height: 300px;
+    }
+
+    .profile-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .publication-card {
+        width: 80%;
+    }
+
+    .user-name {
+        font-size: 1.1em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    .post-img {
+        max-height: 400px;
+    }
+}

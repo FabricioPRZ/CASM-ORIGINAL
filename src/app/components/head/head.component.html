@@ -1,13 +1,7 @@
 <div class="head">
     <div class="profile-section">
-        <img class="head-img" src="usuario.png" alt="photo-profile">
-        <i class="fas fa-edit edit-icon" title="Editar foto de perfil"></i>
-        <h2 class="user-name">Juan Pérez</h2>
-    </div>
-    <div class="icon">
-        <i class="fas fa-paper-plane" (click)="redirect_to_chat($event)" title="Mensajes"></i>
-        <span (click)="redirect_to_chat($event)">Mensajes</span>
-        <i class="fas fa-cog" (click)="redirect_to_configuration($event)" title="Configuración"></i>
-        <span  (click)="redirect_to_configuration($event)">Configuración</span>
+        <img class="head-img" src="{{ user.profileImage || 'usuario.png' }}" alt="photo-profile">
+        <i class="fas fa-edit edit-icon" (click)="openEditDialog()" title="Editar foto de perfil"></i>
+        <h2 class="user-name">{{ user.name }}</h2>
     </div>
 </div>

@@ -69,3 +69,106 @@
 .create-account-a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 767px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-box {
+        padding: 20px;
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    .login-box-h2 {
+        font-size: 20px; /* Reducido para móviles */
+    }
+
+    .login-box-input {
+        padding: 12px;
+        margin: 12px 0;
+        font-size: 14px; /* Ajustado para pantallas pequeñas */
+    }
+
+    .login-box-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .create-account {
+        font-size: 12px; /* Reducido para móviles */
+    }
+
+    .create-account-a {
+        font-size: 14px; /* Reducido para móviles */
+    }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 1023px) {
+    .login-container {
+        padding: 30px;
+    }
+
+    .login-box {
+        padding: 25px;
+        max-width: 90%;
+    }
+
+    .login-box-h2 {
+        font-size: 22px;
+    }
+
+    .login-box-input {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .login-box-button {
+        padding: 14px;
+        font-size: 17px;
+    }
+
+    .create-account {
+        font-size: 13px;
+    }
+
+    .create-account-a {
+        font-size: 15px;
+    }
+}
+
+/* Para pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
+    .login-container {
+        padding: 50px;
+    }
+
+    .login-box {
+        padding: 30px;
+        max-width: 400px;
+    }
+
+    .login-box-h2 {
+        font-size: 24px;
+    }
+
+    .login-box-input {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    .login-box-button {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .create-account {
+        font-size: 14px;
+    }
+
+    .create-account-a {
+        font-size: 16px;
+    }
+}

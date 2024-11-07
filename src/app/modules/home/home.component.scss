@@ -44,3 +44,102 @@
 .feature-box-p-class {
     color: #666;
 }
+
+@media (max-width: 767px) {
+    .hero {
+        height: 50vh;
+    }
+
+    .hero-h1-class {
+        font-size: 20px;
+    }
+
+    .hero-p-class {
+        font-size: 16px;
+    }
+
+    .features {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .feature-box i {
+        font-size: 30px;
+    }
+
+    .feature-box-h3-class {
+        font-size: 18px;
+    }
+
+    .feature-box-p-class {
+        font-size: 14px;
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (max-width: 1023px) {
+    .hero {
+        height: 55vh;
+    }
+
+    .hero-h1-class {
+        font-size: 40px;
+    }
+
+    .hero-p-class {
+        font-size: 18px;
+    }
+
+    .features {
+        padding: 30px;
+    }
+
+    .feature-box i {
+        font-size: 35px;
+    }
+
+    .feature-box-h3-class {
+        font-size: 20px;
+    }
+
+    .feature-box-p-class {
+        font-size: 16px;
+    }
+}
+
+/* Pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-h1-class {
+        font-size: 48px;
+    }
+
+    .hero-p-class {
+        font-size: 20px;
+    }
+
+    .features {
+        padding: 50px;
+    }
+
+    .feature-box i {
+        font-size: 40px;
+    }
+
+    .feature-box-h3-class {
+        font-size: 22px;
+    }
+
+    .feature-box-p-class {
+        font-size: 18px;
+    }
+}

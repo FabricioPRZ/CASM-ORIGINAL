@@ -33,7 +33,8 @@ export class LoginComponent {
       password: this.password,
       specialty: '',
       phone: '',
-      role: ''
+      role: '',
+      profileImage: ''
     };
 
     // Aquí se implementa el método de inicio de sesión del UserService

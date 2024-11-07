@@ -43,26 +43,3 @@
     text-align: center;
     font-size: 1.5em;
 }
-
-.icon {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: rgb(77, 77, 77);
-    gap: 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-}
-
-.icon i {
-    color: #3a7ff0;
-    transition: color 0.3s;
-}
-
-.icon i:hover {
-    color: #1a4f8e;
-}
-
-.icon span {
-    cursor: pointer;
-}

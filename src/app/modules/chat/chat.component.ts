@@ -21,10 +21,17 @@ export class ChatComponent {
     password: '', 
     specialty: '', 
     phone: '123456789', 
-    role: 'user' 
+    role: 'user',
+    profileImage: ''
   };
+  isChatWindowOpen: boolean = false;
 
   onChatSelected(chat: any) {
     this.selectedChat = chat;
+    this.isChatWindowOpen = true; // Cambia a modo ventana de chat
+  }
+
+  closeChatWindow() {
+    this.isChatWindowOpen = false; // Vuelve a la lista de chats
   }
 }

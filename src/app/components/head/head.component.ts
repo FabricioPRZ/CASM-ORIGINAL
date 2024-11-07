@@ -1,22 +1,48 @@
+// head.component.ts
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { UserService } from '../../services/user.service';
+import { EditProfileDialogComponent } from '../edit-profile-dialog/edit-profile-dialog.component';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-head',
-  standalone: true,
   imports: [],
+  standalone: true,
   templateUrl: './head.component.html',
-  styleUrl: './head.component.scss'
+  styleUrls: ['./head.component.scss']
 })
+
 export class HeadComponent {
-  constructor(private router: Router) {}
-  
-  redirect_to_chat (event: Event){
-    event.preventDefault();
-    this.router.navigate(["/chat"])
+  user: User = {
+    id: 0,
+    name: 'Jose Martinez',
+    email: '',
+    password: '',
+    specialty: '',
+    phone: '',
+    role: '',
+    profileImage: ''
+  };
+
+  constructor(private dialog: MatDialog, private userService: UserService) {
+    this.userService.getUserProfile().subscribe((userData) => {
+      this.user = userData;
+    });
   }
-  redirect_to_configuration (event: Event){
-    event.preventDefault();
-    this.router.navigate(["/configuration"])
+
+  openEditDialog() {
+    const dialogRef = this.dialog.open(EditProfileDialogComponent, {
+      width: '400px',
+      data: this.user
+    });
+
+    dialogRef.afterClosed().subscribe((updatedData: User) => {
+      if (updatedData) {
+        this.userService.updateUserProfile(updatedData).subscribe((updatedUser) => {
+          this.user = updatedUser;
+        });
+      }
+    });
   }
 }

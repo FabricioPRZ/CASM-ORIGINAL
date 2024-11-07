@@ -19,7 +19,8 @@ export class ChatWindowsComponent {
     password: '', 
     specialty: '', 
     phone: '', 
-    role: '' 
+    role: '',
+    profileImage: ''
   };
   
   messages = [

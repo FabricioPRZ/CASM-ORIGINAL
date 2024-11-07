@@ -1,12 +1,15 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .chat-container {
     display: flex;
     height: 100vh;
+    transition: transform 0.3s ease;
+
+    &.chat-open .chat-sidebar {
+        display: none;
+    }
+
+    &.chat-open .chat-window {
+        width: 100%;
+    }
 }
 
 .chat-sidebar {
@@ -25,12 +28,33 @@
     height: 100%;
 }
 
-
-.chat-window h3 {
-    margin: 0;
+.back-button {
+    display: none;
+    background: none;
+    border: none;
+    color: #3a7ff0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 10px;
 }
 
-.input-area {
-    border-top: 1px solid #ddd;
-    padding: 10px;
+.chat-open .back-button {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .chat-sidebar {
+        display: block;
+        width: 100%;
+        border-right: none;
+    }
+
+    .chat-window {
+        width: 100%;
+    }
+
+    .back-button {
+        display: inline-flex;
+    }
 }

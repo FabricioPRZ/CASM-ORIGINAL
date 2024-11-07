@@ -32,3 +32,42 @@
     }
   }
   
+  @media (max-width: 768px) {
+    .note-card {
+        padding: 10px;
+        margin-bottom: 8px;
+    }
+
+    .note-title {
+        font-size: 1.1em;
+    }
+
+    .note-content {
+        font-size: 0.9em;
+    }
+
+    .share-button {
+        padding: 5px 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .note-card {
+        padding: 8px;
+        margin-bottom: 6px;
+    }
+
+    .note-title {
+        font-size: 1em;
+    }
+
+    .note-content {
+        font-size: 0.85em;
+    }
+
+    .share-button {
+        padding: 5px 7px;
+        font-size: 0.85em;
+    }
+}

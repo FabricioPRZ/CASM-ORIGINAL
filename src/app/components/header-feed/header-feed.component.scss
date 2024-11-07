@@ -21,6 +21,7 @@
     color: white;
     letter-spacing: 15px;
     font-family: "Merriweather Sans", sans-serif;
+    font-weight: bold;
 }
 
 .header-right-ul {
@@ -51,4 +52,45 @@
     width: 35px;
     height: auto;
     border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .header-feed {
+        padding: 15px;
+    }
+
+    .header-left-img {
+        width: 50px;
+    }
+
+    .header-center-h1 {
+        display: none;
+    }
+
+    .header-right-ul {
+        gap: 10px;
+    }
+
+    .header-right-ul-img {
+        width: 30px;
+    }
+
+    .header-right-ul-li {
+        margin: 0 8px;
+    }
+
+    /* Para pantallas muy pequeñas */
+    @media (max-width: 480px) {
+        .header-right-ul {
+            gap: 5px;
+        }
+
+        .header-left-img {
+            width: 40px;
+        }
+
+        .header-right-ul-img {
+            width: 25px;
+        }
+    }
 }

@@ -1,5 +1,5 @@
 .directorio-card {
-    width: 100%;
+    width: 90%;
     background-color: #ffffff;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
@@ -14,23 +14,49 @@
         transform: translateY(-10px);
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
 }
 
 .profile-img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+
+    @media (max-width: 768px) {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .user-name {
     font-family: "Roboto Slab", serif;
     font-size: 1.2em;
     color: #333;
+
+    @media (max-width: 768px) {
+        font-size: 1.4em;
+    }
 }
 
 .description {
     font-size: 1em;
     color: #666;
+
+    @media (max-width: 768px) {
+        font-size: 1.1em;
+    }
 }
 
 .contact-details {
@@ -43,6 +69,10 @@
     display: flex;
     align-items: center;
     gap: 5px;
+
+    @media (max-width: 768px) {
+        font-size: 1em;
+    }
 }
 
 .message-button {
@@ -57,8 +87,13 @@
     align-items: center;
     gap: 5px;
     transition: background-color 0.3s;
-}
 
-.message-button:hover {
-    background-color: #074c80;
+    &:hover {
+        background-color: #074c80;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+    }
 }

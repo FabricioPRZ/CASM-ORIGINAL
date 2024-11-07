@@ -23,7 +23,8 @@ export class RegisterVoluntaryComponent {
     password: "",
     specialty: "",
     phone: "",
-    role: "voluntary"
+    role: "voluntary",
+    profileImage: ""
   };
   
   notificationMessage: string = '';
@@ -58,6 +59,7 @@ export class RegisterVoluntaryComponent {
       specialty: "",
       phone: "",
       role: "psychologist",
+      profileImage: ""
     };
   }
 }

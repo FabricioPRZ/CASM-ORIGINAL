@@ -6,4 +6,5 @@ export interface User {
     specialty: string;
     phone: string;
     role: string;
+    profileImage: string;
 }
